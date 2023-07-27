@@ -4,6 +4,7 @@ import functions.Assertions;
 import functions.Elements;
 import functions.Waiters;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import pages.BasePage;
@@ -19,10 +20,14 @@ public class BaseTest {
 
     protected BasePage basePage = new BasePage(driver);
     protected HomePage homePage = new HomePage(driver);
+    @AfterSuite
+    public void closeDriver(){
+        driver.quit();
+    }
+    @BeforeSuite
+    public void openHomePage(){
+        homePage.openMainPage();
+    }
 
-//    @AfterSuite
-//    public void closeDriver(){
-//        driver.quit();
-//    }
 
 }

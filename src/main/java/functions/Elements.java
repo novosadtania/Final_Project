@@ -40,12 +40,11 @@ public class Elements {
     public String getTextOnElementString(String string){
         return string;
     }
+    public void clearAll(By by){
+         findElement(by).clear();
+    }
 
-public boolean presentElement(By by){
-    WebElement element = findElement(by);
-    element.isDisplayed();
-    return true;
-}
+
 
 }
 

@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class HomePage  extends BasePage {
     public HomePage(WebDriver driver) {
@@ -14,6 +15,8 @@ public class HomePage  extends BasePage {
         private final static String nameOfBrends = "Natural";
         private final static String nameOfGoods = "Канат";
         private final static String notVariableText = "qwerty";
+        private final static String showAll = "Показати усі";
+        private final static String nothingString = "Нічого";
 
     }
 
@@ -24,7 +27,7 @@ public class HomePage  extends BasePage {
         private final static By languageRuss = By.xpath("//a[text() ='Рос']");
         private final static By textAfterTranslate = By.xpath("//div[@class='z-main-section-header']/h2");
         private final static By searchLine = By.id("search");
-        private final static By dropdownResultFromSearch = By.xpath("//div[@id='search-box']/div/a");
+        private final static By dropdownResultFromSearchShopAll = By.xpath("//div[@class= 'itm-other']");
         private final static By dropdownResultNothingFromSearch = By.xpath("//div[@id='search-box']/div/span");
 
     }
@@ -53,24 +56,41 @@ public class HomePage  extends BasePage {
         elements.sendKeysToElement(Locators.searchLine, Labels.notVariableText);
     }
 
-    public void presentDropdownForDogs() {
-        elements.presentElement(Locators.dropdownForDogs);
-    }
-
-    public void presentDropdownResultNothingFromSearch() {
-        elements.presentElement(Locators.dropdownResultNothingFromSearch);
-    }
-
-    public void presentDropdownResultFromSearch() {
-        elements.presentElement(Locators.dropdownResultFromSearch);
-    }
-
-    public String textOnElementsAfterTranslate() {
+    public String textOnElementsAfterTranslateFromLocators() {
         return elements.getTextOnElement(Locators.textAfterTranslate);
 
     }
 
-    public String textOnElementsAfterTranslate2() {
+    public String textOnElementsAfterTranslateFromLables() {
         return elements.getTextOnElementString(Labels.textToTranslate);
+    }
+
+    public String textOnElementsAfterWritingBrends() {
+        return elements.getTextOnElement(Locators.dropdownResultFromSearchShopAll);
+    }
+    public String textOnElementsAfterWritingBrendsLables() {
+        return elements.getTextOnElementString(Labels.showAll);
+    }
+    public String textOnElementsAfterWritingGoods() {
+        return elements.getTextOnElement(Locators.dropdownResultFromSearchShopAll);
+    }
+    public String textOnElementsAfterWritingGoodsLables() {
+        return elements.getTextOnElementString(Labels.showAll);
+    }
+    public String textOnElementsAfterWritingRandom() {
+        return elements.getTextOnElement(Locators.dropdownResultNothingFromSearch);
+    }
+    public String textOnElementsAfterWritingRandomLables() {
+        return elements.getTextOnElementString(Labels.nothingString);}
+
+    public By dropdownForDogsIsDisplay() {
+         return (Locators.dropdownForDogs);
+    }
+    public By lineForDogs() {
+        return (Locators.lineDogs);
+    }
+
+    public void clearLineSearch(){
+        elements.clearAll(Locators.searchLine);
     }
 }
