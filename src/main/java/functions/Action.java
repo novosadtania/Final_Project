@@ -15,7 +15,7 @@ public class Action {
         actions = new Actions(driver);
     }
 
-    public void moveTo(By forDogsLocator){
-        actions.moveToElement(elements.findElement(forDogsLocator)).perform();
+    public void moveTo(By by){
+        actions.moveToElement(elements.findElement(by)).perform();
     }
 }
