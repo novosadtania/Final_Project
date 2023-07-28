@@ -8,6 +8,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import pages.BasePage;
+import pages.ForDogsPage;
 import pages.HomePage;
 
 public class BaseTest {
@@ -20,10 +21,11 @@ public class BaseTest {
 
     protected BasePage basePage = new BasePage(driver);
     protected HomePage homePage = new HomePage(driver);
+    protected ForDogsPage forDogsPage = new ForDogsPage(driver);/*
     @AfterSuite
     public void closeDriver(){
         driver.quit();
-    }
+    }*/
     @BeforeSuite
     public void openHomePage(){
         homePage.openMainPage();
