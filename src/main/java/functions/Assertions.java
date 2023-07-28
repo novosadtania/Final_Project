@@ -2,7 +2,6 @@ package functions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -25,10 +24,12 @@ public class Assertions {
                 "Очікувалося отримати такий текст: " + expected + ". А отримано :  " + actual + ".");
 
     }
-    public void containtsText(String actual,String excepted){
+
+    public void containtsText(String actual, String excepted) {
         assertTrue(excepted.contains(actual));
     }
-    public void elementIsDisplay(By by){
+
+    public void elementIsDisplay(By by) {
         assertTrue(elements.findElement(by).isDisplayed());
     }
 }

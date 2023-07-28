@@ -11,13 +11,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.util.concurrent.TimeUnit;
 
 public class DriverFactory {
+    private static final long IMPLICITY_WAIT = 20L;
     static Waiters wait;
     static Action action;
     static Assertions assertions;
     static Elements elements;
     private static WebDriver driver;
-
-    private static final long IMPLICITY_WAIT = 20L;
 
     private static WebDriver setUpDriver() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\AdminP\\Desktop\\Selen\\chromedriver.exe");
@@ -34,17 +33,17 @@ public class DriverFactory {
     }
 
     private static WebDriver getInstance() {
-        if(driver == null){
+        if (driver == null) {
             try {
                 driver = setUpDriver();
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
         return driver;
     }
 
-    public static WebDriver startChromeDriver(){
+    public static WebDriver startChromeDriver() {
         driver = getInstance();
         return driver;
     }

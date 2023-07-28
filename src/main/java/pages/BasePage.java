@@ -13,7 +13,7 @@ public class BasePage {
     static Assertions assertions;
     static Elements elements;
 
-    public BasePage(WebDriver driver){
+    public BasePage(WebDriver driver) {
         this.driver = driver;
         wait = new Waiters(driver);
         action = new Action(driver);

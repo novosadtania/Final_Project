@@ -9,13 +9,13 @@ public class Action {
     private final Elements elements;
     private final Actions actions;
 
-    public Action(WebDriver driver){
+    public Action(WebDriver driver) {
         this.driver = driver;
         elements = new Elements(driver);
         actions = new Actions(driver);
     }
 
-    public void moveTo(By by){
+    public void moveTo(By by) {
         actions.moveToElement(elements.findElement(by)).perform();
     }
 }
