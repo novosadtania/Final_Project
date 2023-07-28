@@ -30,7 +30,7 @@ public class ForDogsPageTest extends BaseTest {
     public void addToCompareSection() {
         forDogsPage.openPageForDogs();
         forDogsPage.clickOnButtonAddToCompareSection();
-        assertions.equalsInt(forDogsPage.compareSectionGetNumber(), 1);
+        assertions.elementIsDisplay(forDogsPage.buttonGoToCompareisDisplay());
     }
 
 

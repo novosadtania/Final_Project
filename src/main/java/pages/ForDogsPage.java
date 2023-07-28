@@ -41,10 +41,10 @@ public class ForDogsPage extends BasePage {
     public void clickOnButtonAddToCompareSection() {
         elements.clickOnElement(Locators.buttonAddToCompareSection);
     }
-    public int compareSectionGetNumber() {
-        return Integer.parseInt(elements.getTextOnElement(Locators.compareSectionHaveInt1));
-    }
 
+    public By buttonGoToCompareisDisplay() {
+        return (Locators.buttonGoToCompare);
+    }
 
     private static class Labels {
         private final static String urlPageForDogs = "https://pethouse.ua/ua/shop/sobakam/suhoi-korm/";
@@ -67,6 +67,6 @@ public class ForDogsPage extends BasePage {
         private final static By basketAfterAddSecondAndThirdGoods = By.xpath("//span[@class='quantity large-int'][text()=2]");
 
         private final static By buttonAddToCompareSection= By.xpath("//div[@data-id='000008596']//span");
-        private final static By compareSectionHaveInt1 = By.xpath("//span[@class='z2-header-count'][text()=1]");
+        private final static By buttonGoToCompare = By.xpath("//span[text()='Перейти до порівняння']");
     }
 }
