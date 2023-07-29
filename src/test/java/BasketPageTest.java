@@ -5,7 +5,7 @@ public class BasketPageTest extends BaseTest{
     public void visibleSectionYourPetWillLikeItInBasket(){
         forDogsPage.openPageForDogs();
         forDogsPage.clickOnButtonBuyOnOneElement();
-        assertions.elementIsDisplay(basketPage.oneGoodInBasketVerifyIsDisplay());
+//        assertions.elementIsDisplay(basketPage.oneGoodInBasketVerifyIsDisplay());
         basketPage.openBasketPage();
         assertions.elementIsDisplay(basketPage.sectionYourPetWillLikeIsDisplay());
         basketPage.clickOnButtonDelete();

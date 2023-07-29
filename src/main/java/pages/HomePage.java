@@ -12,12 +12,12 @@ public class HomePage extends BasePage {
         driver.get(Labels.url);
     }
 
-    public void clickOnUkr() {
-        elements.clickOnElement(Locators.languageUkr);
+    public void clickOnButtonLanguageUkr() {
+        elements.clickOnElement(Locators.buttonLanguageUkr);
     }
 
-    public void clickOnRuss() {
-        elements.clickOnElement(Locators.languageRuss);
+    public void clickOnButtonLanguageRuss() {
+        elements.clickOnElement(Locators.buttonLanguageRuss);
     }
 
     public void sendKeysToElementNameOfBrends() {
@@ -42,27 +42,27 @@ public class HomePage extends BasePage {
     }
 
     public String textOnElementsAfterWritingBrends() {
-        return elements.getTextOnElement(Locators.dropdownResultFromSearchShopAll);
+        return elements.getTextOnElement(Locators.dropdownResultShopAllFromSearch);
     }
 
     public String textOnElementsAfterWritingBrendsLables() {
-        return elements.getTextOnElementString(Labels.showAll);
+        return elements.getTextOnElementString(Labels.textShowAll);
     }
 
     public String textOnElementsAfterWritingGoods() {
-        return elements.getTextOnElement(Locators.dropdownResultFromSearchShopAll);
+        return elements.getTextOnElement(Locators.dropdownResultShopAllFromSearch);
     }
 
     public String textOnElementsAfterWritingGoodsLables() {
-        return elements.getTextOnElementString(Labels.showAll);
+        return elements.getTextOnElementString(Labels.textShowAll);
     }
 
     public String textOnElementsAfterWritingRandom() {
-        return elements.getTextOnElement(Locators.dropdownResultNothingFromSearch);
+        return elements.getTextOnElement(Locators.dropdownResultNothingNotFoundFromSearch);
     }
 
     public String textOnElementsAfterWritingRandomLables() {
-        return elements.getTextOnElementString(Labels.nothingString);
+        return elements.getTextOnElementString(Labels.stringNothing);
     }
 
     public By dropdownForDogsIsDisplay() {
@@ -70,7 +70,7 @@ public class HomePage extends BasePage {
     }
 
     public By lineForDogs() {
-        return (Locators.lineDogs);
+        return (Locators.sectionLineForDogs);
     }
 
     public void clearLineSearch() {
@@ -79,24 +79,24 @@ public class HomePage extends BasePage {
 
     private static class Labels {
         private final static String url = "https://pethouse.ua/";
-        private final static String textToTranslate = "Акції та знижки";
+        private final static String textToTranslate = "Кошик";
         private final static String nameOfBrends = "Natural";
         private final static String nameOfGoods = "Канат";
         private final static String notVariableText = "qwerty";
-        private final static String showAll = "Показати усі";
-        private final static String nothingString = "Нічого";
+        private final static String textShowAll = "Показати усі";
+        private final static String stringNothing = "Нічого";
 
     }
 
     private static class Locators {
-        private final static By lineDogs = By.xpath("//li[@id='tpl-top-menu-first-li-1']/a");
+        private final static By sectionLineForDogs = By.xpath("//li[@id='tpl-top-menu-first-li-1']/a");
         private final static By dropdownForDogs = By.xpath("//ul[@style='display: block;']");
-        private final static By languageUkr = By.xpath("//a[text() ='Укр']");
-        private final static By languageRuss = By.xpath("//a[text() ='Рос']");
-        private final static By textAfterTranslate = By.xpath("//div[@class='z-main-section-header']/h2");
+        private final static By buttonLanguageUkr = By.xpath("//a[text() ='Укр']");
+        private final static By buttonLanguageRuss = By.xpath("//a[text() ='Рос']");
+        private final static By textAfterTranslate = By.xpath("//span[@class='hide-for-tablet']");
         private final static By searchLine = By.id("search");
-        private final static By dropdownResultFromSearchShopAll = By.xpath("//div[@class= 'itm-other']");
-        private final static By dropdownResultNothingFromSearch = By.xpath("//div[@id='search-box']/div/span");
+        private final static By dropdownResultShopAllFromSearch = By.xpath("//div[@class= 'itm-other']");
+        private final static By dropdownResultNothingNotFoundFromSearch = By.xpath("//div[@id='search-box']/div/span");
 
     }
 }

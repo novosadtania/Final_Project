@@ -3,8 +3,8 @@ import org.testng.annotations.Test;
 public class HomePageTest extends BaseTest{
     @Test
     public void translateLanguageToUkraine(){
-       homePage.clickOnRuss();
-       homePage.clickOnUkr();
+       homePage.clickOnButtonLanguageRuss();
+       homePage.clickOnButtonLanguageUkr();
        assertions.equalsText(homePage.textOnElementsAfterTranslateFromLocators(),homePage.textOnElementsAfterTranslateFromLables());
     }
     @Test
