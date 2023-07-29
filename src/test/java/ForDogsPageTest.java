@@ -16,6 +16,8 @@ public class ForDogsPageTest extends BaseTest {
         forDogsPage.openPageForDogs();
         forDogsPage.clickOnButtonBuyOnOneElement();
         assertions.equalsInt(forDogsPage.basketAterOneClickBuy(), 1);
+        basketPage.openBasketPage();
+        basketPage.clickOnButtonDelete();
     }
 
     @Test
@@ -38,6 +40,5 @@ public class ForDogsPageTest extends BaseTest {
         forDogsPage.clickOnNameOfGoodforOpen();
         assertions.elementIsDisplay(forDogsPage.descriptionTextisDisplay());
     }
-
 
 }

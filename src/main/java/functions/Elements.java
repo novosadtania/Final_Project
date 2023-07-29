@@ -47,7 +47,20 @@ public class Elements {
     public void clearAll(By by) {
         findElement(by).clear();
     }
-
+    public void clickOnElementAfterWaitForClickable(By by){
+        WebElement element = findElement(by);
+        waiters.waitToBeClickableOfWebElement(element);
+        element.click();
+    }
+    public int getValueFromElement(By by) {
+        WebElement element = findElement(by);
+      return Integer.parseInt(element.getAttribute("value"));
+    }
+public By elementIsClickable(By by){
+        WebElement element = findElement(by);
+        waiters.waitToBeClickableOfWebElement(element);
+        return by;
+}
 
 }
 

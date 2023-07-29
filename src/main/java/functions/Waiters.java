@@ -49,6 +49,8 @@ public class Waiters {
     public Alert switchToAlert() {
         return fluentWait(EXPLICITY_WAIT).until(ExpectedConditions.alertIsPresent());
     }
-
-
+    public void waitToBeClickableOfWebElement(WebElement element){
+        waitForFunction(ExpectedConditions.elementToBeClickable(element), EXPLICITY_WAIT);}
 }
+
+

@@ -5,7 +5,7 @@ public class HomePageTest extends BaseTest{
     public void translateLanguageToUkraine(){
        homePage.clickOnRuss();
        homePage.clickOnUkr();
-       assertions.equalsText(homePage.textOnElementsAfterTranslateFromLables(),homePage.textOnElementsAfterTranslateFromLocators());
+       assertions.equalsText(homePage.textOnElementsAfterTranslateFromLocators(),homePage.textOnElementsAfterTranslateFromLables());
     }
     @Test
     public void writeNameOfBrends(){

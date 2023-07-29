@@ -53,19 +53,14 @@ public class ForDogsPage extends BasePage {
         return (Locators.descriptionText);
     }
 
+
     private static class Labels {
         private final static String urlPageForDogs = "https://pethouse.ua/ua/shop/sobakam/suhoi-korm/";
-        private final static String nameOfPageBrit = "Brit Care";
-        private final static String nameOfPageDryFeed = "Сухий корм";
-        private final static String buttonGoToComparison = "перейти до порівняння";
-        private final static String stringDescription = "Опис";
-
     }
 
     private static class Locators {
         private final static By selectBrit = By.xpath("//span[text()='Brit Care']");
         private final static By selectJosera = By.xpath("//span[text()='Josera']");
-        private final static By nameOfPageLocator = By.xpath("//h1[@class='results-cat-title']");
         private final static By selectorsIsDisplay = By.xpath("//div[@class='z2-selected-filters-wrapper']");
         private final static By buttonBuyInFirstElement = By.xpath("//a[@rel='1153,73']");
         private final static By basketAfterAddOneGood = By.xpath("//span[@class='quantity large-int'][text()=1]");
