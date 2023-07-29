@@ -46,6 +46,13 @@ public class ForDogsPage extends BasePage {
         return (Locators.buttonGoToCompare);
     }
 
+    public void clickOnNameOfGoodforOpen() {
+        elements.clickOnElement(Locators.nameOfGoodforOpen);
+    }
+    public By descriptionTextisDisplay() {
+        return (Locators.descriptionText);
+    }
+
     private static class Labels {
         private final static String urlPageForDogs = "https://pethouse.ua/ua/shop/sobakam/suhoi-korm/";
         private final static String nameOfPageBrit = "Brit Care";
@@ -68,5 +75,7 @@ public class ForDogsPage extends BasePage {
 
         private final static By buttonAddToCompareSection= By.xpath("//div[@data-id='000008596']//span");
         private final static By buttonGoToCompare = By.xpath("//span[text()='Перейти до порівняння']");
+        private final static By nameOfGoodforOpen = By.xpath("//div[@data-brand='Acana']/a");
+        private final static By descriptionText = By.xpath("//span[text()='Опис']");
     }
 }
