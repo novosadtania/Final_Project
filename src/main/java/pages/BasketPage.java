@@ -39,6 +39,9 @@ public class BasketPage extends BasePage {
     public By buttonSubmitDisplay() {
         return (Locators.buttonSubmitInBasket);
     }
+    public By informationEmptyShoppingCartIsDisplay() {
+        return (Locators.informationEmptyShoppingCart);
+    }
 
     public void clickOnButtonMinus(int countOfNumber) {
         for (int i = 0; i < countOfNumber; i++) {
@@ -64,6 +67,7 @@ public class BasketPage extends BasePage {
         private final static By buttonMinusInBasket = By.id("tpl_basket-num-dec");
         private final static By boxOfNumbersAddedGoodInBasket = By.xpath("//input[@data-id='12385']");
         private final static By informationToLoginInBasket = By.xpath("//div[@class='basket-new-address-login']");
+        private final static By informationEmptyShoppingCart = By.xpath("//div[@class='ph-big-cat-little-header']");
 
     }
 }

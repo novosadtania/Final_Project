@@ -1,11 +1,12 @@
+package finalProjectTaniaNovosad;
+
 import driver.DriverFactory;
 import functions.Action;
 import functions.Assertions;
 import functions.Elements;
 import functions.Waiters;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 import pages.BasePage;
 import pages.BasketPage;
 import pages.ForDogsPage;
@@ -31,7 +32,7 @@ public class BaseTest {
 
     @BeforeSuite
     public void openHomePage() {
-        homePage.openMainPage();
+        homePage.openHomePage();
     }
 
 

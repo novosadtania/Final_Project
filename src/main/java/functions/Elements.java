@@ -39,6 +39,15 @@ public class Elements {
     public String getTextOnElement(By by) {
         return findElement(by).getText();
     }
+    public String getTextOnElementWithWaiters(By by) {
+        try {
+            waiters.waitForVisabilityOfWebElement(by);
+            return driver.findElement(by).getText();
+        } catch (NoSuchElementException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     public String getTextOnElementString(String string) {
         return string;

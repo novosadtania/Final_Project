@@ -8,7 +8,7 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
-    public void openMainPage() {
+    public void openHomePage() {
         driver.get(Labels.url);
     }
 
@@ -33,7 +33,7 @@ public class HomePage extends BasePage {
     }
 
     public String textOnElementsAfterTranslateFromLocators() {
-        return elements.getTextOnElement(Locators.textAfterTranslate);
+        return elements.getTextOnElementWithWaiters(Locators.textAfterTranslate);
 
     }
 
@@ -42,7 +42,7 @@ public class HomePage extends BasePage {
     }
 
     public String textOnElementsAfterWritingBrends() {
-        return elements.getTextOnElement(Locators.dropdownResultShopAllFromSearch);
+        return elements.getTextOnElementWithWaiters(Locators.dropdownResultShopAllFromSearch);
     }
 
     public String textOnElementsAfterWritingBrendsLables() {
@@ -50,7 +50,7 @@ public class HomePage extends BasePage {
     }
 
     public String textOnElementsAfterWritingGoods() {
-        return elements.getTextOnElement(Locators.dropdownResultShopAllFromSearch);
+        return elements.getTextOnElementWithWaiters(Locators.dropdownResultShopAllFromSearch);
     }
 
     public String textOnElementsAfterWritingGoodsLables() {
@@ -58,7 +58,7 @@ public class HomePage extends BasePage {
     }
 
     public String textOnElementsAfterWritingRandom() {
-        return elements.getTextOnElement(Locators.dropdownResultNothingNotFoundFromSearch);
+        return elements.getTextOnElementWithWaiters(Locators.dropdownResultNothingNotFoundFromSearch);
     }
 
     public String textOnElementsAfterWritingRandomLables() {
@@ -67,6 +67,9 @@ public class HomePage extends BasePage {
 
     public By dropdownForDogsIsDisplay() {
         return (Locators.dropdownForDogs);
+    }
+    public By dropdownAfterWritingAnythingInLineSearchIsDisplay() {
+        return (Locators.dropdownAfterWritingAnythingInLineSearch);
     }
 
     public By lineForDogs() {
@@ -97,6 +100,7 @@ public class HomePage extends BasePage {
         private final static By searchLine = By.id("search");
         private final static By dropdownResultShopAllFromSearch = By.xpath("//div[@class= 'itm-other']");
         private final static By dropdownResultNothingNotFoundFromSearch = By.xpath("//div[@id='search-box']/div/span");
+        private final static By dropdownAfterWritingAnythingInLineSearch = By.id("search-box");
 
     }
 }

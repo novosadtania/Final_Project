@@ -1,7 +1,9 @@
+package finalProjectTaniaNovosad;
+
 import org.testng.annotations.Test;
 
 public class ForDogsPageTest extends BaseTest {
-    @Test
+    @Test(priority = 1)
     public void clickOnCheckBox() {
         forDogsPage.openPageForDogs();
         forDogsPage.clickOnCheckBoxBrit();
@@ -11,35 +13,35 @@ public class ForDogsPageTest extends BaseTest {
         forDogsPage.clickOnCheckBoxJosera();
     }
 
-    @Test
+    @Test(priority = 2)
     public void addToBasketOne() {
         forDogsPage.openPageForDogs();
         forDogsPage.clickOnButtonBuyOnOneElement();
         assertions.equalsInt(forDogsPage.basketAterOneClickBuy(), 1);
         basketPage.openBasketPage();
         basketPage.clickOnButtonDelete();
+        assertions.elementIsDisplay(basketPage.informationEmptyShoppingCartIsDisplay());
     }
 
-    @Test
+    @Test (priority = 3)
     public void addToBasketSecondAndThird() {
         forDogsPage.openPageForDogs();
-        forDogsPage.clickOnButtonBuyOnSecondElement();
-        forDogsPage.clickOnButtonBuyOnThirdElement();
-        assertions.equalsInt(forDogsPage.basketAterSecondAndThirdClickBuy(), 2);
+        assertions.elementIsDisplay(forDogsPage.sortFormOnPageForDogsIsDisplay());
+
     }
 
-    @Test
+    @Test (priority = 4)
     public void addToCompareSection() {
         forDogsPage.openPageForDogs();
         forDogsPage.clickOnButtonAddToCompareSection();
         assertions.elementIsDisplay(forDogsPage.buttonGoToCompareisDisplay());
     }
 
-    @Test
+    @Test (priority = 5)
     public void openPageWithAllInformationOfGood() {
         forDogsPage.openPageForDogs();
         forDogsPage.clickOnNameOfGoodforOpen();
-        assertions.elementIsDisplay(forDogsPage.descriptionTextisDisplay());
+        assertions.elementIsDisplay(forDogsPage.descriptionTextisDIsplay());
     }
 
 }

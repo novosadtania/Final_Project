@@ -2,7 +2,9 @@
 <suite name="AllTests Suite">
     <test name="AllTestCases">
         <classes>
-
+            <class name="finalProjectTaniaNovosad.HomePageTest"/>
+            <class name="finalProjectTaniaNovosad.ForDogsPageTest"/>
+            <class name="finalProjectTaniaNovosad.BasketPageTest"/>
         </classes>
     </test>
 </suite>
