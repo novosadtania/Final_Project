@@ -6,6 +6,7 @@ public class HomePageTest extends BaseTest {
     @Test(priority = 2)
     public void translateLanguageToUkraine() {
         homePage.openHomePage();
+        assertions.elementIsDisplay(homePage.buttonLanguageRussIsDisplay());
         homePage.clickOnButtonLanguageRuss();
         homePage.clickOnButtonLanguageUkr();
         assertions.equalsText(homePage.textOnElementsAfterTranslateFromLocators(), homePage.textOnElementsAfterTranslateFromLables());

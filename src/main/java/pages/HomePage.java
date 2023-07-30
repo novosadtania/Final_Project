@@ -68,6 +68,9 @@ public class HomePage extends BasePage {
     public By dropdownForDogsIsDisplay() {
         return (Locators.dropdownForDogs);
     }
+    public By buttonLanguageRussIsDisplay() {
+        return (Locators.buttonLanguageRuss);
+    }
     public By dropdownAfterWritingAnythingInLineSearchIsDisplay() {
         return (Locators.dropdownAfterWritingAnythingInLineSearch);
     }
