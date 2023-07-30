@@ -4,7 +4,8 @@ import functions.Assertions;
 import functions.Elements;
 import functions.Waiters;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 import pages.BasePage;
 import pages.BasketPage;
 import pages.ForDogsPage;
@@ -21,13 +22,15 @@ public class BaseTest {
     protected BasePage basePage = new BasePage(driver);
     protected HomePage homePage = new HomePage(driver);
     protected ForDogsPage forDogsPage = new ForDogsPage(driver);
-    protected BasketPage basketPage = new BasketPage (driver);
+    protected BasketPage basketPage = new BasketPage(driver);
+
     @AfterSuite
-    public void closeDriver(){
+    public void closeDriver() {
         driver.quit();
     }
+
     @BeforeSuite
-    public void openHomePage(){
+    public void openHomePage() {
         homePage.openMainPage();
     }
 

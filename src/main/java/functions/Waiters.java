@@ -30,27 +30,11 @@ public class Waiters {
         wait.until(function);
     }
 
-    public WebElement waitForVisabilityOfWebElementReturn(By locator) {
-        return fluentWait(EXPLICITY_WAIT).until(ExpectedConditions.visibilityOfElementLocated(locator));
-    }
-
-    public void waitForVisabilityOfWebElement(WebElement element) {
-        waitForFunction(ExpectedConditions.visibilityOfAllElements(element), EXPLICITY_WAIT);
-    }
-
     public void waitForVisabilityOfWebElement(By locator) {
         waitForFunction(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator), EXPLICITY_WAIT);
     }
 
-    public void switchToFrame(By locator) {
-        waitForFunction(ExpectedConditions.frameToBeAvailableAndSwitchToIt(locator), EXPLICITY_WAIT);
+    public void waitToBeClickableOfWebElement(WebElement element) {
+        waitForFunction(ExpectedConditions.elementToBeClickable(element), EXPLICITY_WAIT);
     }
-
-    public Alert switchToAlert() {
-        return fluentWait(EXPLICITY_WAIT).until(ExpectedConditions.alertIsPresent());
-    }
-    public void waitToBeClickableOfWebElement(WebElement element){
-        waitForFunction(ExpectedConditions.elementToBeClickable(element), EXPLICITY_WAIT);}
 }
-
-

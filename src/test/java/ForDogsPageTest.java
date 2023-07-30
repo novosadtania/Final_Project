@@ -34,8 +34,9 @@ public class ForDogsPageTest extends BaseTest {
         forDogsPage.clickOnButtonAddToCompareSection();
         assertions.elementIsDisplay(forDogsPage.buttonGoToCompareisDisplay());
     }
+
     @Test
-    public void openPageWithAllInformationOfGood(){
+    public void openPageWithAllInformationOfGood() {
         forDogsPage.openPageForDogs();
         forDogsPage.clickOnNameOfGoodforOpen();
         assertions.elementIsDisplay(forDogsPage.descriptionTextisDisplay());

@@ -1,15 +1,15 @@
 import org.testng.annotations.Test;
 
-public class BasketPageTest extends BaseTest{
+public class BasketPageTest extends BaseTest {
     @Test
-    public void visibleSectionYourPetWillLikeItInBasket(){
+    public void visibleSectionYourPetWillLikeItInBasket() {
         forDogsPage.openPageForDogs();
         forDogsPage.clickOnButtonBuyOnOneElement();
-//        assertions.elementIsDisplay(basketPage.oneGoodInBasketVerifyIsDisplay());
         basketPage.openBasketPage();
         assertions.elementIsDisplay(basketPage.sectionYourPetWillLikeIsDisplay());
         basketPage.clickOnButtonDelete();
     }
+
     @Test
     public void buttonSubmitInBasketIsDisplay() {
         forDogsPage.openPageForDogs();
@@ -19,18 +19,20 @@ public class BasketPageTest extends BaseTest{
         assertions.elementIsDisplay(basketPage.buttonSubmitDisplay());
         basketPage.clickOnButtonDelete();
     }
+
     @Test
-    public void clickButtonPlus(){
+    public void clickButtonPlus() {
         int countOfNumber = 3;
         forDogsPage.openPageForDogs();
         forDogsPage.clickOnButtonBuyOnOneElement();
         assertions.elementIsDisplay(basketPage.oneGoodInBasketVerifyIsDisplay());
         basketPage.openBasketPage();
-        basketPage.clickOnPlus(countOfNumber);
-        assertions.equalsInt(basketPage.getValueFromBoxOfNumbersAddedGoods()-1,countOfNumber);
+        basketPage.clickOnButtonPlus(countOfNumber);
+        assertions.equalsInt(basketPage.getValueFromBoxOfNumbersAddedGoods() - 1, countOfNumber);
         basketPage.clickOnButtonDelete();
 
     }
+
     @Test
     public void clickButtonMinus() {
         int countOfNumber = 3;
@@ -38,11 +40,12 @@ public class BasketPageTest extends BaseTest{
         forDogsPage.clickOnButtonBuyOnOneElement();
         assertions.elementIsDisplay(basketPage.oneGoodInBasketVerifyIsDisplay());
         basketPage.openBasketPage();
-        basketPage.clickOnPlus(countOfNumber);
-        basketPage.clickOnMinus(countOfNumber);
-        assertions.equalsInt(basketPage.getValueFromBoxOfNumbersAddedGoods(),1);
+        basketPage.clickOnButtonPlus(countOfNumber);
+        basketPage.clickOnButtonMinus(countOfNumber);
+        assertions.equalsInt(basketPage.getValueFromBoxOfNumbersAddedGoods(), 1);
         basketPage.clickOnButtonDelete();
     }
+
     @Test
     public void informationToLoginInBasketPresent() {
         forDogsPage.openPageForDogs();
@@ -53,5 +56,5 @@ public class BasketPageTest extends BaseTest{
         basketPage.clickOnButtonDelete();
     }
 
-    }
+}
 

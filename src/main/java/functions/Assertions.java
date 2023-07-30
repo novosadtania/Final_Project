@@ -34,10 +34,9 @@ public class Assertions {
     }
 
 
-
     public void equalsInt(int actual, int expected) {
         assertEquals(actual, expected,
                 "Очікувалося отримати таку цифру: " + expected + ". А отримано :  " + actual + ".");
-}
+    }
 }
 

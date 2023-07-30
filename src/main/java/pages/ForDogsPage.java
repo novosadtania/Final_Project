@@ -20,24 +20,31 @@ public class ForDogsPage extends BasePage {
     public void clickOnCheckBoxJosera() {
         elements.clickOnElement(Locators.selectJosera);
     }
+
     public By selectersIsDisplay() {
         return (Locators.selectorsIsDisplay);
     }
+
     public void clickOnButtonBuyOnOneElement() {
         elements.clickOnElement(Locators.buttonBuyInFirstElement);
     }
+
     public int basketAterOneClickBuy() {
         return Integer.parseInt(elements.getTextOnElement(Locators.basketAfterAddOneGood));
     }
+
     public void clickOnButtonBuyOnSecondElement() {
         elements.clickOnElement(Locators.buttonBuyInSecondElement);
     }
+
     public void clickOnButtonBuyOnThirdElement() {
         elements.clickOnElement(Locators.buttonBuyInThirdElement);
     }
+
     public int basketAterSecondAndThirdClickBuy() {
         return Integer.parseInt(elements.getTextOnElement(Locators.basketAfterAddSecondAndThirdGoods));
     }
+
     public void clickOnButtonAddToCompareSection() {
         elements.clickOnElement(Locators.buttonAddToCompareSection);
     }
@@ -49,6 +56,7 @@ public class ForDogsPage extends BasePage {
     public void clickOnNameOfGoodforOpen() {
         elements.clickOnElement(Locators.nameOfGoodforOpen);
     }
+
     public By descriptionTextisDisplay() {
         return (Locators.descriptionText);
     }
@@ -68,7 +76,7 @@ public class ForDogsPage extends BasePage {
         private final static By buttonBuyInThirdElement = By.xpath("//a[@rel='219,56']");
         private final static By basketAfterAddSecondAndThirdGoods = By.xpath("//span[@class='quantity large-int'][text()=2]");
 
-        private final static By buttonAddToCompareSection= By.xpath("//div[@data-id='000008596']//span");
+        private final static By buttonAddToCompareSection = By.xpath("//div[@data-id='000008596']//span");
         private final static By buttonGoToCompare = By.xpath("//span[text()='Перейти до порівняння']");
         private final static By nameOfGoodforOpen = By.xpath("//div[@data-brand='Acana']/a");
         private final static By descriptionText = By.xpath("//span[text()='Опис']");
