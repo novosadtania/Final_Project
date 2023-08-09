@@ -39,6 +39,7 @@ public class Elements {
     public String getTextOnElement(By by) {
         return findElement(by).getText();
     }
+
     public String getTextOnElementWithWaiters(By by) {
         try {
             waiters.waitForVisabilityOfWebElement(by);

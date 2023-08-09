@@ -39,6 +39,7 @@ public class BasketPage extends BasePage {
     public By buttonSubmitDisplay() {
         return (Locators.buttonSubmitInBasket);
     }
+
     public By informationEmptyShoppingCartIsDisplay() {
         return (Locators.informationEmptyShoppingCart);
     }

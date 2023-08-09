@@ -68,9 +68,11 @@ public class HomePage extends BasePage {
     public By dropdownForDogsIsDisplay() {
         return (Locators.dropdownForDogs);
     }
+
     public By buttonLanguageRussIsDisplay() {
         return (Locators.buttonLanguageRuss);
     }
+
     public By dropdownAfterWritingAnythingInLineSearchIsDisplay() {
         return (Locators.dropdownAfterWritingAnythingInLineSearch);
     }
@@ -87,7 +89,7 @@ public class HomePage extends BasePage {
         private final static String url = "https://pethouse.ua/";
         private final static String textToTranslate = "Кошик";
         private final static String nameOfBrends = "Natural";
-        private final static String nameOfGoods = "Канат";
+        private final static String nameOfGoods = "rope";
         private final static String notVariableText = "qwerty";
         private final static String textShowAll = "Показати усі";
         private final static String stringNothing = "Нічого";
@@ -97,8 +99,8 @@ public class HomePage extends BasePage {
     private static class Locators {
         private final static By sectionLineForDogs = By.xpath("//li[@id='tpl-top-menu-first-li-1']/a");
         private final static By dropdownForDogs = By.xpath("//ul[@style='display: block;']");
-        private final static By buttonLanguageUkr = By.xpath("//a[text() ='Укр']");
-        private final static By buttonLanguageRuss = By.xpath("//a[text() ='Рос']");
+        private final static By buttonLanguageUkr = By.xpath("//a[@href='https://pethouse.ua/ua/']");
+        private final static By buttonLanguageRuss = By.xpath("//a[@href='https://pethouse.ua/ru/']");
         private final static By textAfterTranslate = By.xpath("//span[@class='hide-for-tablet']");
         private final static By searchLine = By.id("search");
         private final static By dropdownResultShopAllFromSearch = By.xpath("//div[@class= 'itm-other']");

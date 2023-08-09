@@ -48,6 +48,7 @@ public class ForDogsPage extends BasePage {
     public By descriptionTextisDIsplay() {
         return (Locators.descriptionText);
     }
+
     public By sortFormOnPageForDogsIsDisplay() {
         return (Locators.sortFormOnPageForDogs);
     }
@@ -64,9 +65,9 @@ public class ForDogsPage extends BasePage {
         private final static By buttonBuyInFirstElement = By.xpath("//a[@rel='1153,73']");
         private final static By basketAfterAddOneGood = By.xpath("//span[@class='quantity large-int'][text()=1]");
         private final static By buttonAddToCompareSection = By.xpath("//div[@data-id='000008596']//span");
-        private final static By buttonGoToCompare = By.xpath("//span[contains(text(), 'Перейти' )]");
+        private final static By buttonGoToCompare = By.xpath("//div[@class='cat-compare-added']//span");
         private final static By nameOfGoodForOpen = By.xpath("//div[@data-brand='Acana']/a");
-        private final static By descriptionText = By.xpath("//span[text()='Опис']");
+        private final static By descriptionText = By.xpath("//div[@id='ph-new-prod-info-block']//span");
         private final static By sortFormOnPageForDogs = By.id("searchSortForm");
     }
 }

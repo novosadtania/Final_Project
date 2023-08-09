@@ -11,7 +11,9 @@ import pages.BasePage;
 import pages.BasketPage;
 import pages.ForDogsPage;
 import pages.HomePage;
+import utils.TestResultListeners;
 
+@Listeners(TestResultListeners.class)
 public class BaseTest {
     protected WebDriver driver = DriverFactory.startChromeDriver();
 
