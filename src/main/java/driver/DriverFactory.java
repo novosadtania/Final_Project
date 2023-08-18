@@ -17,11 +17,11 @@ public class DriverFactory {
     static Assertions assertions;
     static Elements elements;
     private static WebDriver driver;
-
     private static WebDriver setUpDriver() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\AdminP\\Desktop\\Selen\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\AdminP\\Desktop\\Selen\\chromedriver-win64\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
+        options.setBinary("C:\\Users\\AdminP\\Desktop\\Selen\\chrome-win64\\chrome.exe");
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(IMPLICITY_WAIT, TimeUnit.SECONDS);
